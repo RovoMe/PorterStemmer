@@ -8,7 +8,13 @@ http://logging.apache.org/log4j/2.x/manual/layouts.html
 	%p : Level of the event
 	%t : Thread that produced the logging-event
  -->
-<configuration status="warn" name="PorterStemmer" packages="at.rovo">
+<configuration status="warn" name="PorterStemmer" packages="at.rovo.stemmer">
+
+  <properties>
+  	<!-- Log file for checking Parser -->
+    <property name="stemmerFile">log/StemmerTest.log</property>
+  </properties>
+
   <appenders>
   	<Console name="Console" target="SYSTEM_OUT">
       <PatternLayout pattern="%d{HH:mm:ss} %p %C{1}.%M() - %m%n"/>
@@ -30,20 +36,20 @@ http://logging.apache.org/log4j/2.x/manual/layouts.html
       <PatternLayout pattern="%d{HH:mm:ss} %p %C{1}.%M() - %m%n"/>
       <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
     </Console>
-    <File name="TestFile" fileName="log/PorterStemmerTest.log" append="false">
+    <File name="File" fileName="${stemmerFile}" append="false">
       <PatternLayout pattern="%d{HH:mm:ss} %p %C{1}.%M() - %m%n"/>
     </File>
   </appenders>
   
   <loggers>	
   	<logger name="at.rovo.stemmer.PorterStemmer" level="debug" additivity="true">
-  	  <appender-ref ref="ExtractorFile"/>
+  	  <appender-ref ref="File"/>
   	</logger>
 	<logger name="at.rovo.test" level="debug" additivity="false">
-	  <appender-ref ref="TestFile"/>
+	  <appender-ref ref="File"/>
 	</logger>
 	
-	<logger name="at.rovo" level="info" additivity="true">
+	<logger name="at.rovo.stemmer" level="info" additivity="true">
   	  <appender-ref ref="Console"/>
   	</logger>
   	

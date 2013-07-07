@@ -113,7 +113,7 @@ public final class PorterStemmer
 		if (word.endsWith("y") && containsVowel(stemWord(word, "y"))) // (*v*) Y --> I
 			word = replace(word, "y", "i");
 		
-		logger.debug("After step 1: "+word);
+		logger.debug("After step 1: {}", word);
 		return word;
 	}
 	
@@ -200,7 +200,7 @@ public final class PorterStemmer
 				; // do nothing
 		}
 	
-		logger.debug("After step 2: "+word);
+		logger.debug("After step 2: {}", word);
 		return word;
 	}
 	
@@ -244,7 +244,7 @@ public final class PorterStemmer
 				;
 		}
 		
-		logger.debug("After step 3: "+word);
+		logger.debug("After step 3: {}", word);
 		return word;
 	}
 	
@@ -330,7 +330,7 @@ public final class PorterStemmer
 				;
 		}
 		
-		logger.debug("After step 4: "+word);
+		logger.debug("After step 4: {}", word);
 		return word;
 	}
 	
@@ -352,7 +352,7 @@ public final class PorterStemmer
 		else if (word.endsWith("l") && hasDoubleConsonantEnding(word) && getMeasure(word)>1) // (m>1 and *d and *L) --> single letter
 			word = word.substring(0, word.length()-1);
 		
-		logger.debug("After step 5: "+word);
+		logger.debug("After step 5: {}", word);
 		return word;
 	}
 	
