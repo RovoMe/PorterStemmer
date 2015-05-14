@@ -2,6 +2,7 @@ package at.rovo.test;
 
 
 import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import at.rovo.stemmer.PorterStemmer;
 
