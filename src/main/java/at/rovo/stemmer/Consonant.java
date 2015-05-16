@@ -9,14 +9,14 @@ package at.rovo.stemmer;
  */
 public class Consonant extends Letter
 {
-	/**
-	 * Initializes a new instance of this class with the provided letter as start of this sequence of consonants
-	 *
-	 * @param letter
-	 * 		First consonant of this sequence of consonants
-	 */
-	protected Consonant(char letter)
-	{
-		super(letter);
-	}
+    /**
+     * Initializes a new instance of this class with the provided letter as start of this sequence of consonants
+     *
+     * @param letter
+     *         First consonant of this sequence of consonants
+     */
+    protected Consonant(char letter)
+    {
+        super(letter);
+    }
 }

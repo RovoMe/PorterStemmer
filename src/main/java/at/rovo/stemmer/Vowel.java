@@ -9,14 +9,14 @@ package at.rovo.stemmer;
  */
 public class Vowel extends Letter
 {
-	/**
-	 * Initializes a new instance of this class with the provided letter as start of this sequence of vowels
-	 *
-	 * @param letter
-	 * 		First vowel of this sequence of vowels
-	 */
-	protected Vowel(char letter) 
-	{
-		super(letter);
-	}
+    /**
+     * Initializes a new instance of this class with the provided letter as start of this sequence of vowels
+     *
+     * @param letter
+     *         First vowel of this sequence of vowels
+     */
+    protected Vowel(char letter)
+    {
+        super(letter);
+    }
 }

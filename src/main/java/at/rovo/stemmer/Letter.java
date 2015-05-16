@@ -13,38 +13,38 @@ package at.rovo.stemmer;
  */
 public abstract class Letter
 {
-	protected String letter;
+    protected String letter;
 
-	/**
-	 * Initializes a new instance of a letter with the provided character as starting letter.
-	 *
-	 * @param letter
-	 * 		Character this letter should start with
-	 */
-	protected Letter(char letter)
-	{
-		this.letter = "" + letter;
-	}
+    /**
+     * Initializes a new instance of a letter with the provided character as starting letter.
+     *
+     * @param letter
+     *         Character this letter should start with
+     */
+    protected Letter(char letter)
+    {
+        this.letter = "" + letter;
+    }
 
-	/**
-	 * Returns all characters of this sequence.
-	 *
-	 * @return All characters of this sequence
-	 */
-	public String getLetter()
-	{
-		return this.letter;
-	}
+    /**
+     * Returns all characters of this sequence.
+     *
+     * @return All characters of this sequence
+     */
+    public String getLetter()
+    {
+        return this.letter;
+    }
 
-	/**
-	 * Adds a character to the letter-sequence.
-	 *
-	 * @param c
-	 * 		The character to add
-	 */
-	public void add(char c)
-	{
-		this.letter += c;
-	}
+    /**
+     * Adds a character to the letter-sequence.
+     *
+     * @param c
+     *         The character to add
+     */
+    public void add(char c)
+    {
+        this.letter += c;
+    }
 
 }
