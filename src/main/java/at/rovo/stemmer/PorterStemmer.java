@@ -669,7 +669,7 @@ public final class PorterStemmer
     private static boolean endsWith_cvc(final String word)
     {
         char[] c = word.toLowerCase().toCharArray();
-        if (c.length >= 3)
+        if (c.length > 3)
         {
             if (isConsonant(c[c.length - 3], c[c.length - 4]) && // c
                 !isConsonant(c[c.length - 2], c[c.length - 3]) && // v
