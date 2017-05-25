@@ -1,9 +1,10 @@
 package at.rovo.stemmer;
 
+import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Implementation of Porter's stemming algorithm as presented in his paper 'An algorithm for suffix stripping'
@@ -12,7 +13,7 @@ import org.apache.logging.log4j.Logger;
  */
 public final class PorterStemmer
 {
-    private static Logger LOG = LogManager.getLogger(PorterStemmer.class.getName());
+    private static final Logger LOG = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     /**
      * Stems a word into a certain principal part or base form.
